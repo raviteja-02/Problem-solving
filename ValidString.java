@@ -10,6 +10,8 @@ Input 1:
 Output :
 •	0   → number of * and # are equal
 */
+import java.util.Scanner;
+
 public class ValidString {
     public static int makeValidString(String s) {
         int num_of_star = 0, num_of_hash = 0;
@@ -31,8 +33,11 @@ public class ValidString {
     }
 
     public static void main(String[] args) {
-        String s = "###***";
+        String s;
+        Scanner sc = new Scanner(System.in);
+        s = sc.nextLine();
         int result = makeValidString(s);
         System.out.println(result);
+        sc.close();
     }
 }
